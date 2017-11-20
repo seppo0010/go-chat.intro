@@ -22,6 +22,18 @@
     float: left;
     width: 50%;
   }
+  ul.race-condition {
+    float: left;
+    width: 40%;
+  }
+  .thread-one {
+    color: blue;
+    list-style: none;
+  }
+  .thread-two {
+    color: red;
+    list-style: none;
+  }
   #author {
     position: absolute;
     bottom: 8px;
@@ -157,6 +169,25 @@
         <li>Rust</li>
         <li>Scala</li>
         <li>Swift</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Concurrencia</h2>
+      <p>Qué es un <em>thread</em></p>
+      <p>Qué problemas puede traer tener varios <em>threads</em></p>
+      <p>Implementar un contador</p>
+      <ul class="race-condition left">
+        <li>Leer el valor</li>
+        <li>Calcular el nuevo valor</li>
+        <li class="thread-one">Hilo 1 está acá</li>
+        <li>Escribir el nuevo valor</li>
+      </ul>
+      <ul class="race-condition right">
+        <li class="thread-two">Hilo 2 está acá</li>
+        <li>Leer el valor</li>
+        <li>Calcular el nuevo valor</li>
+        <li>Escribir el nuevo valor</li>
       </ul>
     </section>
 
